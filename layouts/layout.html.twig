@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ПроРеальность</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="shortcut icon" href="{{ root }}/flat-ui/images/favicon.ico">
+    <link rel="stylesheet" href="{{ root }}/flat-ui/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ root }}/flat-ui/css/flat-ui.css">
+    <!-- Using only with Flat-UI (free)-->
+    <link rel="stylesheet" href="{{ root }}/common-files/css/icon-font.css">
+    <!-- end -->
+    <link rel="stylesheet" href="{{ root }}/common-files/css/animations.css">
+
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-blog/css/ui-kit-styles.css">
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-contacts/css/ui-kit-styles.css">
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-content/css/ui-kit-styles.css">
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-crew/css/ui-kit-styles.css">
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-footer/css/ui-kit-styles.css">
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-header/css/ui-kit-styles.css">
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-price/css/ui-kit-styles.css">
+    <link rel="stylesheet" href="{{ root }}/ui-kit/ui-kit-projects/css/ui-kit-styles.css">
+
+    <style type="text/css">
+      body {
+        padding-top: 0;
+      }
+      /* flex video */
+      .flex-video {
+        position: relative;
+        padding-top: 25px;
+        padding-bottom: 67.5%;
+        height: 0;
+        margin-bottom: 16px;
+        overflow: hidden;
+        }
+       
+      .flex-video.widescreen { padding-bottom: 57.25%; }
+      .flex-video.vimeo { padding-top: 0; }
+       
+      .flex-video iframe,
+      .flex-video object,
+      .flex-video embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      @media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+        .flex-video { padding-top: 0; }
+      }
+    </style>
+    <script src="{{ root }}/common-files/js/jquery-1.10.2.min.js"></script>
+  </head>
+  <body>
+    {% block body %}
+      {% block header %}
+        <header class="header-8">
+          <div class="container">
+            <div class="row">
+              <div class="navbar col-sm-12" role="navigation">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle"></button>
+                  <a class="brand" href="index.html#">
+                    <img src="http://prorealnost.local.ic/uploads/prorealnost/textlogo-standing-transparent.png" style="margin-top:0; width:255px; height:41px;" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                  <ul class="nav">
+                    <li><a href="{{ 'homepage' | page_url }}">Тренинг</a>
+                    </li>
+                    <li><a href="{{ 'learnmore' | page_url }}">Узнать больше</a>
+                    </li>
+                    <!--li><a href="#">Блог</a>
+                    </li>
+                    <li><a href="#">Магазин</a>
+                    </li-->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-background"></div>
+        </header>
+      {% endblock %}
+      {% block content %}
+        {{ body | raw }}
+      {% endblock %}
+      {% block footer %}
+        <footer class="footer-1 bg-midnight-blue">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-5">
+                <p class="lead"><b>Ты</b> можешь больше</p>
+                <p><em>«Это было одно из самых важных переживаний в жизни»</em></p>
+                <p><em>«Вся жизнь разделилась на до и после»</em></p>
+                <p><em>«Я никогда не буду таким как прежде»</em></p>
+              </div>
+              <nav>
+                <div class="col-sm-2 col-sm-offset-1">
+                  <h6>Категории</h6>
+                  <ul>
+                    <li><a href="index.html#">О нас</a>
+                    </li>
+                    <li><a href="index.html#">Блог</a>
+                    </li>
+                    <li><a href="index.html#">Команда</a>
+                    </li>
+                    <li><a href="index.html#">Работа</a>
+                    </li>
+                    <li><a href="index.html#">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm-2">
+                  <h6>Следуй за нами</h6>
+                  <ul>
+                    <li><a href="index.html#">Facebook</a>
+                    </li>
+                    <li><a href="index.html#">Twitter</a>
+                    </li>
+                    <li><a href="index.html#">Instagram</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <div class="col-sm-2 buy-btn">
+                <a class="btn btn-danger btn-block" href="index.html#">Запишись</a>
+                или <a href="index.html#">Узнай Больше</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-5 additional-links">
+                <a href="index.html#">Оферта</a>
+                <a href="index.html#">Политика конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      {% endblock %}
+    {% endblock %}
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ root }}/flat-ui/js/bootstrap.min.js"></script>
+    <script src="{{ root }}/common-files/js/modernizr.custom.js"></script>
+    <script src="{{ root }}/common-files/js/page-transitions.js"></script>
+    <script src="{{ root }}/common-files/js/jquery.backgroundvideo.min.js"></script>
+    <script src="{{ root }}/common-files/js/froogaloop.min.js"></script>
+    <script src="{{ root }}/common-files/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <script src="{{ root }}/common-files/js/jquery.sharrre.min.js"></script>
+    <script src="{{ root }}/common-files/js/startup-kit.js"></script>
+    <script src="{{ root }}/site/jquery-validation-1.13.0/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+        $.validator.setDefaults({
+            highlight: function(element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function(element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorElement: 'span',
+            errorClass: 'help-block',
+            errorPlacement: function(error, element) {
+                if(element.parent('.input-group').length) {
+                    error.insertAfter(element.parent());
+                } else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+    </script>
+  </body>
+</html>

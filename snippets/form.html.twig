@@ -1,0 +1,20 @@
+<form action="{{ 1 | order_product_url }}" method="POST">
+  <div class="form-group">
+    <label class="h6">Имя / Фамилия</label>
+    <input name="name" type="text" required class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="h6">Телефон</label>
+    <input name="phone" type="text" required class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="h6">E-mail</label>
+    <input name="email" type="email" required class="form-control">
+  </div>
+  <div class="form-group">
+    <label class="h6">Город</label>
+    <input name="city" type="text" required class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary"><span class="fui-mail"></span>
+  </button>
+</form>
